@@ -17,3 +17,9 @@ awesome db create myself database
 
 ### client
 - 真正操作数据库的客户端
+
+### 设计理念
+结构与存储分离，所有的数据表结构都保存到 `mydb` 文件中， 具体文件保存到数据库同名文件
+
+### 已实现功能
+- 数据库初始化 `python init_database.py`，可以创建出一个空的数据库结构，并且初始化用户表以及一个用户
