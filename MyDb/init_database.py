@@ -34,8 +34,7 @@ class Init:
     def init_mydb(self):
         # 初始化数据库
         # 创建用户信息
-
-        filename = config.DATABASE_INFO_TABLE_PATH
+        filename = config.SCHEMA_TABLE_PATH
         if not os.path.exists(filename):
             logger.info("file:{} not exist, make now".format(filename))
             create_mydb_database()
