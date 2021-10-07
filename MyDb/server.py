@@ -15,12 +15,11 @@ import asyncio
 from gevent.pool import Pool
 from gevent import monkey
 
-
 monkey.patch_all()
 
 
 class Server:
-    def __init__(self, host="localhost", port=1235):
+    def __init__(self, host="localhost", port=1234):
         self.sel = selectors.DefaultSelector()
         self.sock = socket.socket()
         self.sock.bind((host, port))
@@ -71,9 +70,8 @@ class Server:
             print(e)
 
 
-
 if __name__ == '__main__':
     try:
-        Server(port=1235).run()
+        Server(port=1237).run()
     except Exception as e:
         print(e)
